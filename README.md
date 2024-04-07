@@ -27,3 +27,9 @@
 | address-mask   | Search range's end value Ip       | No      |255.0.0.0|
 | time-start   | Search range's start value date    | No      |24.01.2023|
 | time-end   | Search range's end value date       | No      |24.01.2024|
+
+#### Input string for parsing
+##### example:
+```
+223.235.187.227:2021-10-08 08:30:13
+```
