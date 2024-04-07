@@ -1,0 +1,8 @@
+{
+  "file-log": "D:\\TestFiles\\20240406200023\\20240406200025.txt",
+  "file-output": "D:\\output",
+  "address-start": "0.0.100.0",
+  "address-mask": "255.0.0.0",
+  "time-start": "24.01.2023",
+  "time-end": "24.01.2024"
+}
