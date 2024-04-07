@@ -29,7 +29,10 @@
 | time-end   | Search range's end value date       | No      |24.01.2024|
 
 #### Input string for parsing
-##### example:
+```
+[Ip adress]:[DateTime]
+```
+##### Example:
 ```
 223.235.187.227:2021-10-08 08:30:13
 ```
