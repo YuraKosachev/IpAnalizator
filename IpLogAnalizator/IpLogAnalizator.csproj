@@ -18,4 +18,13 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Implementation\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IpLogAnalizator.Core\IpLogAnalizator.Core.csproj" />
+    <ProjectReference Include="..\IpLogAnalizator.Logic\IpLogAnalizator.Logic.csproj" />
+  </ItemGroup>
+
 </Project>

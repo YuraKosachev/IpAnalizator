@@ -1,4 +1,4 @@
-﻿using IpLogAnalizator.Interfaces;
+﻿using IpLogAnalizator.Core.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace IpLogAnalizator

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpLogAnalizator", "IpLogAnalizator\IpLogAnalizator.csproj", "{09AE276D-5FD4-4DF0-A8B7-D47671A8C5F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IpLogAnalizator", "IpLogAnalizator\IpLogAnalizator.csproj", "{09AE276D-5FD4-4DF0-A8B7-D47671A8C5F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpLogAnalizator.Core", "IpLogAnalizator.Core\IpLogAnalizator.Core.csproj", "{2CD21EE2-CCBF-4897-A84C-66FE322F711D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpLogAnalizator.Logic", "IpLogAnalizator.Logic\IpLogAnalizator.Logic.csproj", "{3A75B8B2-3BF9-4085-8789-87B2B02BA3C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{09AE276D-5FD4-4DF0-A8B7-D47671A8C5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09AE276D-5FD4-4DF0-A8B7-D47671A8C5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09AE276D-5FD4-4DF0-A8B7-D47671A8C5F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CD21EE2-CCBF-4897-A84C-66FE322F711D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD21EE2-CCBF-4897-A84C-66FE322F711D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD21EE2-CCBF-4897-A84C-66FE322F711D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD21EE2-CCBF-4897-A84C-66FE322F711D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A75B8B2-3BF9-4085-8789-87B2B02BA3C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A75B8B2-3BF9-4085-8789-87B2B02BA3C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A75B8B2-3BF9-4085-8789-87B2B02BA3C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A75B8B2-3BF9-4085-8789-87B2B02BA3C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

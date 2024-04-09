@@ -1,10 +1,10 @@
-﻿using IpLogAnalizator.Implementation.Enums;
-using IpLogAnalizator.Implementation.Factories;
-using IpLogAnalizator.Implementation.Handlers;
-using IpLogAnalizator.Implementation.Logger;
-using IpLogAnalizator.Implementation.Services;
-using IpLogAnalizator.Interfaces;
-using IpLogAnalizator.Models;
+﻿using IpLogAnalizator.Core.Enums;
+using IpLogAnalizator.Core.Interfaces;
+using IpLogAnalizator.Logic.Factories;
+using IpLogAnalizator.Logic.Handlers;
+using IpLogAnalizator.Logic.Logger;
+using IpLogAnalizator.Logic.Services;
+using IpLogAnalizator.Core.Models;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace IpLogAnalizator
