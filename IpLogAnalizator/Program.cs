@@ -1,15 +1,14 @@
-﻿using IpLogAnalizator.Implementation.Factories;
-using IpLogAnalizator.Implementation.Logger;
-using IpLogAnalizator.Interfaces;
+﻿using IpLogAnalizator.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace IpLogAnalizator
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static async Task Main(string[] args)
         {
-            IApp application = new App(new AppFactory(), new HandlerFactory());
-            application.RunAsync().GetAwaiter().GetResult();
+            IApp application = new App(new ServiceCollection());
+            await application.Configure().RunAsync();
         }
     }
 }

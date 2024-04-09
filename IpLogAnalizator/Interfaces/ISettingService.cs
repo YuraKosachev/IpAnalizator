@@ -1,6 +1,5 @@
 ﻿using IpLogAnalizator.Models;
 
-
 namespace IpLogAnalizator.Interfaces
 {
     public interface ISettingService

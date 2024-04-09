@@ -9,7 +9,7 @@ namespace IpLogAnalizator.Implementation.Handlers
 {
     public class DataPreparationHandler : BaseHandler, IHandler
     {
-        public DataPreparationHandler(IAppFactory appFactory) : base(appFactory)
+        public DataPreparationHandler(ILogger logger) : base(logger)
         {
         }
 

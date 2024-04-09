@@ -8,9 +8,9 @@ namespace IpLogAnalizator.Implementation.Handlers
     {
         private readonly IFileService _fileService;
 
-        public ParseDataHandler(IAppFactory appFactory) : base(appFactory)
+        public ParseDataHandler(IFileService fileService, ILogger logger): base(logger)
         {
-            _fileService = appFactory.CreateFileService();
+            _fileService = fileService;
         }
 
         public override async Task ModuleExecuteAsync(HandlerContext context)

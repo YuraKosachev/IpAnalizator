@@ -10,9 +10,9 @@ namespace IpLogAnalizator.Implementation.Handlers
         private readonly IFileService _fileService;
         private string _path;
 
-        public SaveDataHandler(IAppFactory appFactory) : base(appFactory)
+        public SaveDataHandler(IFileService fileService, ILogger logger) : base(logger)
         {
-            _fileService = appFactory.CreateFileService();
+            _fileService = fileService;
         }
 
         public override async Task ModuleExecuteAsync(HandlerContext context)

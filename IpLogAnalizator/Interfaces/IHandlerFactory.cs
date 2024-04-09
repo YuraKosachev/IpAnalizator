@@ -4,6 +4,6 @@ namespace IpLogAnalizator.Interfaces
 {
     public interface IHandlerFactory
     {
-        IHandler CreateHandler(HandlerType type, IAppFactory appFactory);
+        IHandler CreateHandler(HandlerType type);
     }
 }

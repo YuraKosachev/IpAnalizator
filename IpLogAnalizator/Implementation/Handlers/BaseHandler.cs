@@ -6,13 +6,11 @@ namespace IpLogAnalizator.Implementation.Handlers
     public abstract class BaseHandler
     {
         protected IHandler? _nextHandler;
-        protected readonly IAppFactory _appFactory;
         protected readonly ILogger _logger;
 
-        public BaseHandler(IAppFactory appFactory)
+        public BaseHandler(ILogger logger)
         {
-            _appFactory = appFactory ?? throw new ArgumentNullException(nameof(appFactory));
-            _logger = appFactory.CreateAppLogger();
+            _logger = logger;
         }
 
         public abstract Task ModuleExecuteAsync(HandlerContext context);

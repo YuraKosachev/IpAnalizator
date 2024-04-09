@@ -7,9 +7,9 @@ namespace IpLogAnalizator.Implementation.Handlers
     {
         private readonly ISettingService _settingService;
 
-        public SettingHandler(IAppFactory appFactory) : base(appFactory)
+        public SettingHandler(ISettingService settingService, ILogger logger) : base(logger)
         {
-            _settingService = appFactory?.CreateSettingService();
+            _settingService = settingService;
         }
 
         public override async Task ModuleExecuteAsync(HandlerContext context)
