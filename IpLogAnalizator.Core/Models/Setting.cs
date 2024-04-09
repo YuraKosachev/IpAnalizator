@@ -4,7 +4,6 @@ using IpLogAnalizator.Core.Extensions;
 using System.Net;
 using System.Text.Json.Serialization;
 
-
 namespace IpLogAnalizator.Core.Models
 {
     public class Setting
@@ -17,11 +16,11 @@ namespace IpLogAnalizator.Core.Models
         [JsonPropertyName("file-output")]
         public string? FileOutput { get; set; }
 
-        [Option("address-start", HelpText = "log file output path")]
+        [Option("address-start", HelpText = "ip address - start range")]
         [JsonPropertyName("address-start")]
         public string? AddressStartFormat { get; set; }
 
-        [Option("address-mask", HelpText = "log file output path")]
+        [Option("address-mask", HelpText = "ip address - end range")]
         [JsonPropertyName("address-mask")]
         public string? AddressMaskFormat { get; set; }
 
@@ -34,7 +33,7 @@ namespace IpLogAnalizator.Core.Models
         public string? EndDateFormat { get; set; }
 
         public IPAddress? AddressStart => AddressStartFormat?.TryToParse();
-     
+
         public IPAddress? AddressMask => AddressMaskFormat?.TryToParse();
 
         public long? AddressStartInt => AddressStart?.ToInt();

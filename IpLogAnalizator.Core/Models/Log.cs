@@ -7,13 +7,6 @@ namespace IpLogAnalizator.Core.Models
     {
         public IPAddress Ip { get; set; }
         public DateTime? Date { get; set; }
-        public long? IpInt
-        {
-            get
-            {
-                return Ip?.ToInt();
-            }
-        }
-
+        public long? IpInt => Ip?.ToInt();
     }
 }

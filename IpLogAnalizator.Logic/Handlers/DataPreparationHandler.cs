@@ -4,6 +4,7 @@ using IpLogAnalizator.Core.Exceptions;
 using IpLogAnalizator.Core.Extensions;
 using IpLogAnalizator.Core.Interfaces;
 using IpLogAnalizator.Core.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace IpLogAnalizator.Logic.Handlers
 {
@@ -48,16 +49,18 @@ namespace IpLogAnalizator.Logic.Handlers
                 predicate = predicate.And(log => log.Date != null && end >= log.Date.Value.Date);
             }
 
+            Func<IGrouping<long?, Log>, string> mapper = (group) =>
+            {
+                var log = group.FirstOrDefault();
+                var ip = log?.Ip.ToString();
+                var dates = group.Select(gr => gr.Date?.ToString(FormatConstants.FullDateFormat)).ToList();
+                var count = group.Count();
+                return $"IP: {ip} REQUEST_COUNT: {count} DATES: {string.Join(";", dates)}";
+            };
+
             var result = logs.Where(predicate)
                 .GroupBy(log => log.IpInt)
-                .Select(group =>
-                {
-                    var log = group.FirstOrDefault();
-                    var ip = log.Ip.ToString();
-                    var dates = string.Join(";", group.Select(gr => gr.Date.Value.ToString(FormatConstants.FullDateFormat)).ToList());
-                    var count = group.Count();
-                    return $"ip: {ip} request count: {count} dates: {dates}";
-                })
+                .Select(group => mapper(group))
                 .ToArray();
 
             context.Data[Key.Result] = result;

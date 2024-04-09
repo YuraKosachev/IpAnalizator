@@ -1,5 +1,4 @@
-﻿
-namespace IpLogAnalizator.Core.Models
+﻿namespace IpLogAnalizator.Core.Models
 {
     public class ParseResult
     {
@@ -7,6 +6,5 @@ namespace IpLogAnalizator.Core.Models
         public string? Source { get; set; }
         public string? Error { get; set; }
         public bool IsError { get; set; }
-
     }
 }
