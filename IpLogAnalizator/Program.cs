@@ -7,8 +7,15 @@ namespace IpLogAnalizator
     {
         private static async Task Main(string[] args)
         {
-            IApp application = new App(new ServiceCollection());
-            await application.Configure().RunAsync();
+            try
+            {
+                IApp application = new App(new ServiceCollection());
+                await application.Configure().RunAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
